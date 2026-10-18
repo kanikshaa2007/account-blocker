@@ -1,203 +1,271 @@
-<div align="center">
+# MiroFish India Monitor
 
-<img src="./static/image/MiroFish_logo_compressed.jpeg" alt="MiroFish Logo" width="75%"/>
+A real-time viral misinformation detection and moderation dashboard for India-focused social media content, built as an extension of **MiroFish**, a multi-agent AI prediction engine.
 
-<a href="https://trendshift.io/repositories/16144" target="_blank"><img src="https://trendshift.io/api/badge/repositories/16144" alt="666ghj%2FMiroFish | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+MiroFish extracts seed information from the real world (breaking news, policy drafts, financial signals) and builds a parallel digital world where thousands of agents with independent personalities, long-term memory and behavioral logic interact. This extension applies that engine to misinformation: it ingests viral posts, verifies claims against official fact-check sources, simulates how unverified claims might spread, and gives human analysts a dashboard to review and act.
 
-简洁通用的群体智能引擎，预测万物
-</br>
-<em>A Simple and Universal Swarm Intelligence Engine, Predicting Anything</em>
+The core simulation engine is powered by [OASIS](https://github.com/camel-ai/oasis) (Open Agent Social Interaction Simulations) from the CAMEL-AI team.
 
-<a href="https://www.shanda.com/" target="_blank"><img src="./static/image/shanda_logo.png" alt="666ghj%2FMiroFish | Shanda" height="40"/></a>
+---
 
-[![GitHub Stars](https://img.shields.io/github/stars/666ghj/MiroFish?style=flat-square&color=DAA520)](https://github.com/666ghj/MiroFish/stargazers)
-[![GitHub Watchers](https://img.shields.io/github/watchers/666ghj/MiroFish?style=flat-square)](https://github.com/666ghj/MiroFish/watchers)
-[![GitHub Forks](https://img.shields.io/github/forks/666ghj/MiroFish?style=flat-square)](https://github.com/666ghj/MiroFish/network)
-[![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/666ghj/MiroFish)
+## Features
 
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](http://discord.gg/ePf5aPaHnA)
-[![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/mirofish_ai)
-[![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/mirofish_ai/)
+- **Live ingestion** from X (Twitter), Instagram, YouTube, Google News India, and Reddit RSS
+- **Verification pipeline** with specialist agents, grounded in official PIB Fact Check sources
+- **Urgency routing** that triages by harm, uncertainty, spread and complexity (never by a truth probability)
+- **Spread-graph analytics** in Neo4j (burst detection, PageRank)
+- **OASIS simulations** that forecast the spread of high-risk unverified claims
+- **ML fake-news classifier** (TF-IDF + Logistic Regression) as a supporting signal
+- **Human-in-the-loop analyst console** with review, evidence explorer and audit log
 
-[English](./README.md) | [中文文档](./README-ZH.md)
+---
 
-</div>
+## Architecture
 
-## ⚡ Overview
-
-**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
-
-> You only need to: Upload seed materials (data analysis reports or interesting novel stories) and describe your prediction requirements in natural language</br>
-> MiroFish will return: A detailed prediction report and a deeply interactive high-fidelity digital world
-
-### Our Vision
-
-MiroFish is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions, we break through the limitations of traditional prediction:
-
-- **At the Macro Level**: We are a rehearsal laboratory for decision-makers, allowing policies and public relations to be tested at zero risk
-- **At the Micro Level**: We are a creative sandbox for individual users — whether deducing novel endings or exploring imaginative scenarios, everything can be fun, playful, and accessible
-
-From serious predictions to playful simulations, we let every "what if" see its outcome, making it possible to predict anything.
-
-## 🌐 Live Demo
-
-Welcome to visit our online demo environment and experience a prediction simulation on trending public opinion events we've prepared for you: [mirofish-live-demo](https://666ghj.github.io/mirofish-demo/)
-
-## 📸 Screenshots
-
-<div align="center">
-<table>
-<tr>
-<td><img src="./static/image/Screenshot/运行截图1.png" alt="Screenshot 1" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图2.png" alt="Screenshot 2" width="100%"/></td>
-</tr>
-<tr>
-<td><img src="./static/image/Screenshot/运行截图3.png" alt="Screenshot 3" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图4.png" alt="Screenshot 4" width="100%"/></td>
-</tr>
-<tr>
-<td><img src="./static/image/Screenshot/运行截图5.png" alt="Screenshot 5" width="100%"/></td>
-<td><img src="./static/image/Screenshot/运行截图6.png" alt="Screenshot 6" width="100%"/></td>
-</tr>
-</table>
-</div>
-
-## 🎬 Demo Videos
-
-### 1. Wuhan University Public Opinion Simulation + MiroFish Project Introduction
-
-<div align="center">
-<a href="https://www.bilibili.com/video/BV1VYBsBHEMY/" target="_blank"><img src="./static/image/武大模拟演示封面.png" alt="MiroFish Demo Video" width="75%"/></a>
-
-Click the image to watch the complete demo video for prediction using BettaFish-generated "Wuhan University Public Opinion Report"
-</div>
-
-### 2. Dream of the Red Chamber Lost Ending Simulation
-
-<div align="center">
-<a href="https://www.bilibili.com/video/BV1cPk3BBExq" target="_blank"><img src="./static/image/红楼梦模拟推演封面.jpg" alt="MiroFish Demo Video" width="75%"/></a>
-
-Click the image to watch MiroFish's deep prediction of the lost ending based on hundreds of thousands of words from the first 80 chapters of "Dream of the Red Chamber"
-</div>
-
-> **Financial Prediction**, **Political News Prediction** and more examples coming soon...
-
-## 🔄 Workflow
-
-1. **Graph Building**: Seed extraction & Individual/collective memory injection & GraphRAG construction
-2. **Environment Setup**: Entity relationship extraction & Persona generation & Agent configuration injection
-3. **Simulation**: Dual-platform parallel simulation & Auto-parse prediction requirements & Dynamic temporal memory updates
-4. **Report Generation**: ReportAgent with rich toolset for deep interaction with post-simulation environment
-5. **Deep Interaction**: Chat with any agent in the simulated world & Interact with ReportAgent
-
-## 🚀 Quick Start
-
-### Option 1: Source Code Deployment (Recommended)
-
-#### Prerequisites
-
-| Tool | Version | Description | Check Installation |
-|------|---------|-------------|-------------------|
-| **Node.js** | 18+ | Frontend runtime, includes npm | `node -v` |
-| **Python** | ≥3.11, ≤3.12 | Backend runtime | `python --version` |
-| **uv** | Latest | Python package manager | `uv --version` |
-
-#### 1. Configure Environment Variables
-
-```bash
-# Copy the example configuration file
-cp .env.example .env
-
-# Edit the .env file and fill in the required API keys
+```
+┌──────────────────────────────────────────────────────────────┐
+│                    FRONTEND (Vue 3 + Vite)                   │
+│                 http://localhost:3000/console                │
+│  Live Monitor · Verification Queue · Claim Investigation     │
+│  Evidence Explorer · Simulations · Moderation Review         │
+│  Audit Log · Settings                                        │
+└──────────────────────────────────────────────────────────────┘
+                              │  API proxy (/api)
+                              ▼
+┌──────────────────────────────────────────────────────────────┐
+│                  BACKEND (Flask + Python 3.11)               │
+│                    http://localhost:5001                     │
+│  /api/monitor/ingest   live collect → gate → route → verify  │
+│  /api/monitor/queue    sightings / jobs / reviews / actions  │
+│  /api/monitor/approve  human-approved platform report        │
+│  /api/graph/*          GraphRAG construction (Zep Cloud)     │
+│  /api/simulation/*     OASIS Twitter/Reddit simulation       │
+│  /api/report/*         ReportAgent evidence pack             │
+│  /health               service health check                  │
+└──────────────────────────────────────────────────────────────┘
 ```
 
-**Required Environment Variables:**
+---
 
-```env
-# LLM API Configuration (supports any LLM API with OpenAI SDK format)
-# Recommended: Alibaba Qwen-plus model via Bailian Platform: https://bailian.console.aliyun.com/
-# High consumption, try simulations with fewer than 40 rounds first
-LLM_API_KEY=your_api_key
-LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-LLM_MODEL_NAME=qwen-plus
+## Agents
 
-# Zep Cloud Configuration
-# Free monthly quota is sufficient for simple usage: https://app.getzep.com/
-ZEP_API_KEY=your_zep_api_key
+| Agent | Role | Trigger |
+|---|---|---|
+| OASIS simulation agents | Forecast spread of unverified claims in a simulated Twitter/Reddit world | Only when `POST /api/simulation/start` is called |
+| `text_verifier` | Base claim extraction and verification | Every post |
+| `image_forensics` | Image manipulation detection | Image / mixed content |
+| `video_forensics` | Video deepfake detection | Video / mixed content |
+| `audio_transcriber` | Audio transcription | Audio content |
+| `source_credibility` | Source trustworthiness scoring | Evidence uncertainty ≥ 0.5 |
+| `multilingual_retriever` | Non-English claim verification | Language ≠ English |
+| `evidence_synthesizer` | Multi-evidence aggregation | Uncertainty ≥ 0.6 or complexity ≥ 0.6 |
+| `ml_classifier` | ML fake-probability score (supports, never decides) | Every routed post |
+| `ReportAgent` | Post-simulation evidence pack | After simulation completes (COMPLETED / STOPPED) |
+
+---
+
+## Routing and Verification Logic
+
+The moderation router computes a **verification urgency score**, not a truth probability:
+
+```
+score = (0.45 × harm + 0.25 × uncertainty + 0.20 × spread + 0.10 × complexity) / total
 ```
 
-#### 2. Install Dependencies
+| Tier | Score |
+|---|---|
+| low | < 0.35 |
+| normal | 0.35 – 0.60 |
+| high | 0.60 – 0.80 |
+| urgent | ≥ 0.80 |
+
+Virality never implies guilt. It only sets triage speed.
+
+**Verdict rules (conservative)**
+
+- `confirmed_fake` requires an official PIB fact-check citation match (score ≥ 0.3)
+- `unverified` is the default when no official citation exists; human review is required
+- The ML classifier supports but never decides alone
+
+**Event trigger:** a simulation and report run only when tier ∈ {high, urgent} **and** a burst is detected **and** verdict == `confirmed_fake`.
+
+---
+
+## Fake-News Classifier
+
+Trained on `master_fake_real_clean.csv` (68,173 rows drawn from LIAR, ISOT, TheOnion, India_MythFacts and others).
+
+| Metric | Value |
+|---|---|
+| Training rows | 54,002 (24,205 fake / 29,797 real) |
+| Test accuracy | 0.8981 |
+| Precision (fake) | 0.9003 |
+| Recall (fake) | 0.8688 |
+| F1 (fake) | 0.8843 |
+| F1 (real) | 0.9089 |
+
+Model: TF-IDF (word 1–2 grams) + Logistic Regression, saved in `backend/models/fake_news_master/`.
+
+---
+
+## Project Stages
+
+| Stage | Component |
+|---|---|
+| 0 | Baseline freeze and compliance scope |
+| 1 | Connectors (X / Instagram / YouTube / Google News RSS) → RoutingInput |
+| 2 | Neo4j spread-graph and analytics (burst detection, PageRank) |
+| 3 | Realtime scheduler, RSS/webhook quota reduction |
+| 4 | Verification workers, PIB ground truth, Web-Writer |
+| 5 | Event bus (urgent + burst + fake → simulation trigger) |
+| 6 | Reviewer dashboard, runner wiring, monitor API |
+| 7 | Live dry-run with real APIs |
+| 8 | Real-time social scraping (Reddit RSS, Google News) |
+| 9 | ML fake-news classifier |
+
+Per-stage documentation lives in `docs/india-monitoring/`.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.11–3.12
+- Node.js 18+
+- Neo4j (optional, for spread-graph persistence)
+
+### Backend
 
 ```bash
-# One-click installation of all dependencies (root + frontend + backend)
-npm run setup:all
+cd backend
+cp .env.example .env    # fill in LLM_API_KEY, ZEP_API_KEY, NEO4J_PASSWORD, etc.
+python -m pip install -r requirements.txt
+python run.py
 ```
 
-Or install step by step:
+Backend runs at http://localhost:5001.
+
+### Frontend
 
 ```bash
-# Install Node dependencies (root + frontend)
-npm run setup
-
-# Install Python dependencies (backend, auto-creates virtual environment)
-npm run setup:backend
-```
-
-#### 3. Start Services
-
-```bash
-# Start both frontend and backend (run from project root)
+cd frontend
+npm install
 npm run dev
 ```
 
-**Service URLs:**
-- Frontend: `http://localhost:3000`
-- Backend API: `http://localhost:5001`
+Console runs at http://localhost:3000/console.
 
-**Start Individually:**
+### Docker
+
+Docker and Docker Compose configuration is included for containerized runs.
+
+---
+
+## Usage
+
+1. Open `/console/settings` and turn demo mode **off** for live data, or leave it **on** to use dataset fixtures.
+2. Go to **Live Monitor** and click **Fetch live feed**.
+3. Review incoming items with their accounts, tiers and urgency meters. Click **Open source** to view the original article or post.
+4. Click **Investigate** to see the urgency rationale, evidence and verdict options.
+5. Submit a human verdict in **Moderation Review**.
+6. Check **Audit Log** for the record of all actions.
+
+### Dataset scripts
 
 ```bash
-npm run backend   # Start backend only
-npm run frontend  # Start frontend only
+cd backend
+python scripts/train_fake_news_master.py   # train on your downloaded dataset
+python scripts/hf_ifnd_test.py             # test on the HuggingFace IFND dataset
 ```
 
-### Option 2: Docker Deployment
+---
 
-```bash
-# 1. Configure environment variables (same as source deployment)
-cp .env.example .env
+## Tech Stack
 
-# 2. Pull image and start
-docker compose up -d
+| Layer | Technology |
+|---|---|
+| Backend | Python 3.11, Flask, Flask-CORS |
+| Simulation | OASIS (camel-ai, camel-oasis) |
+| Graph / Memory | Zep Cloud (GraphRAG), Neo4j (spread-graph) |
+| LLM | OpenAI-compatible API (Qwen-plus via Bailian) |
+| Frontend | Vue 3, Vite, Vue Router, Axios |
+| ML | scikit-learn (TF-IDF + Logistic Regression) |
+| Data | Pandas, HuggingFace datasets |
+| Container | Docker, Docker Compose |
+
+---
+
+## Project Structure
+
+```
+backend/
+├── app/
+│   ├── api/                 graph.py, simulation.py, report.py, monitor.py
+│   ├── services/
+│   │   ├── connectors/      X/IG/YT clients, scoring, collector
+│   │   ├── spread_graph/    Neo4j schema, analytics, store
+│   │   ├── realtime/        quota, webhooks, scheduler, server
+│   │   ├── verification/    PIB client, web-writer, workers, model_verifier
+│   │   ├── eventbus/        bus, wiring, monitor_store
+│   │   └── moderation/      router.py (urgency routing)
+│   └── config.py
+├── models/fake_news_master/ trained classifier artifact
+├── scripts/                 train_fake_news_master.py, train_fake_news_improved.py,
+│                            stage7_dryrun.py, check_sightings.py
+├── run.py                   Flask entry point
+├── pyproject.toml
+└── requirements.txt
+
+frontend/
+├── src/
+│   ├── console/
+│   │   ├── AppShell.vue
+│   │   ├── views/           Overview, LiveMonitor, VerifyQueue, Investigation,
+│   │   │                    EvidenceExplorer, Simulations, Review, AuditLog, Settings
+│   │   ├── components/      MfIcon, MfBadge, UrgencyMeter, EmptyState,
+│   │   │                    ConfirmDialog, DemoBanner
+│   │   ├── fixtures/        demoClaims.js
+│   │   ├── api.js, connection.js, demoMode.js, analystStore.js, toasts.js
+│   ├── api/index.js         axios client
+│   ├── router/index.js      /console routes
+│   └── main.js
+├── index.html
+├── package.json
+└── vite.config.js
+
+docs/india-monitoring/       STAGE0–STAGE9 documentation
 ```
 
-Reads `.env` from root directory by default, maps ports `3000 (frontend) / 5001 (backend)`
+---
 
-> Mirror address for faster pulling is provided as comments in `docker-compose.yml`, replace if needed.
+## Safety and Compliance
 
-## 📬 Join the Conversation
+- **Report-only mode:** `ACTION_MODE=report_only` is enforced; no auto-blocking of third-party accounts.
+- **Official APIs only:** X API v2, Instagram Graph API, YouTube Data API. No password scraping.
+- **Public pages only:** Web-Writer reads PIB and ministry pages; no login-wall scraping.
+- **PII minimization:** stores post IDs and public metrics, not private messages.
+- **Human-in-the-loop:** all consequential actions require reviewer approval.
+- **IT Rules 2021 / DPDP Act:** virality is not guilt; an audit log is maintained.
 
-<div align="center">
-<img src="./static/image/QQ群.png" alt="QQ Group" width="60%"/>
-</div>
+---
 
-&nbsp;
+## Known Limitations
 
-The MiroFish team is recruiting full-time/internship positions. If you're interested in multi-agent simulation and LLM applications, feel free to send your resume to: **mirofish@shanda.com**
+- X, Instagram and YouTube require official API tokens (placeholders in `.env`); Reddit RSS and Google News RSS work without keys.
+- PIB Fact Check has no public RSS feed, so ground truth falls back to verdict-pattern Google News headlines.
+- YouTube RSS is intermittently bot-gated and is skipped gracefully.
+- The classifier is trained on article-length text, so short social claims are noisier. It supports decisions but never makes them.
+- All enforcement is report-only and needs human approval.
 
-## 📄 Acknowledgments
+---
 
-**MiroFish has received strategic support and incubation from Shanda Group!**
+## License
 
-MiroFish's simulation engine is powered by **[OASIS (Open Agent Social Interaction Simulations)](https://github.com/camel-ai/oasis)**, We sincerely thank the CAMEL-AI team for their open-source contributions!
+AGPL-3.0, the same as the original MiroFish project. Strategic support and incubation from Shanda Group.
 
-## 📈 Project Statistics
+## Acknowledgements
 
-<a href="https://github.com/666ghj/MiroFish">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="static/image/star-history-dark.svg" />
-   <source media="(prefers-color-scheme: light)" srcset="static/image/star-history-light.svg" />
-   <img alt="666ghj/MiroFish Star History Chart" src="static/image/star-history-light.svg" />
- </picture>
-</a>
+- [OASIS](https://github.com/camel-ai/oasis) by the CAMEL-AI team
+- Zep Cloud for GraphRAG memory
+- Datasets: LIAR, ISOT, TheOnion, India_MythFacts, HuggingFace IFND
