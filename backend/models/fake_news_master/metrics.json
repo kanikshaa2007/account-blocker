@@ -1,0 +1,27 @@
+{
+ "train_n": 54002,
+ "fake_n": 24205,
+ "real_n": 29797,
+ "test_n": 10801,
+ "accuracy": 0.8981,
+ "precision_fake": 0.9003,
+ "recall_fake": 0.8688,
+ "f1_fake": 0.8843,
+ "precision_real": 0.8964,
+ "recall_real": 0.9218,
+ "f1_real": 0.9089,
+ "confusion_matrix": [
+  [
+   5494,
+   466
+  ],
+  [
+   635,
+   4206
+  ]
+ ],
+ "model": "tfidf-logreg",
+ "C": 1.0,
+ "max_features": 60000,
+ "seconds": 71.5
+}

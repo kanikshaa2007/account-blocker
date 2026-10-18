@@ -1,0 +1,30 @@
+{
+ "train_n": 35700,
+ "model": "tfidf-logreg",
+ "C": 1.0,
+ "max_features": 50000,
+ "splits": {
+  "ifnd_valid": {
+   "n": 1052,
+   "accuracy": 0.9506,
+   "precision_fake": 0.9435,
+   "recall_fake": 0.995,
+   "f1_fake": 0.9686
+  },
+  "ifnd_test": {
+   "n": 1053,
+   "accuracy": 0.9582,
+   "precision_fake": 0.9494,
+   "recall_fake": 0.9988,
+   "f1_fake": 0.9734
+  },
+  "isot_validation": {
+   "n": 6822,
+   "accuracy": 0.979,
+   "precision_fake": 0.9826,
+   "recall_fake": 0.9754,
+   "f1_fake": 0.979
+  }
+ },
+ "seconds": 83.0
+}
